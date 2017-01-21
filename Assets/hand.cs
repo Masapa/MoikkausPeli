@@ -45,7 +45,6 @@ public class hand : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-    Debug.Log(shoulder.rotation.ToEuler().x + " "+ Quaternion.Euler(60,0,0).x);
    if(shoulder.rotation.ToEuler().x > Quaternion.Euler(60,0,0).x) {
    Debug.Log("onnistuu");
    }
