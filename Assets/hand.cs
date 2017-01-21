@@ -7,21 +7,13 @@ public class hand : MonoBehaviour {
     Rigidbody shoulder;
     Rigidbody elbow;
     Rigidbody wrist;
-    List<Quaternion> shoulderPosition;
-    List<Quaternion> elbowPosition;
 
-    List<Quaternion> shoulderPositiontmp;
-    List<Quaternion> elbowPositiontmp;
+    SkinnedMeshRenderer bs;
 
 
 	// Use this for initialization
 	void Start () {
-    elbowPositiontmp = new List<Quaternion>();
-    shoulderPositiontmp = new List<Quaternion>();
-    shoulderPosition = new List<Quaternion>();
-    elbowPosition = new List<Quaternion>();
-    shoulderPosition.Add(new Quaternion(-0.1f,0.7f,0.1f,0.7f));
-    elbowPosition.Add(new Quaternion(0.0f,-0.7f,0.0f,0.7f));
+    bs = GetComponentInChildren<SkinnedMeshRenderer>();
 
     
      Transform[] transsi = gameObject.GetComponentsInChildren<Transform>();
@@ -45,30 +37,64 @@ public class hand : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-    Debug.Log(shoulder.rotation.ToEuler().x + " "+ Quaternion.Euler(60,0,0).x);
-   if(shoulder.rotation.ToEuler().x > Quaternion.Euler(60,0,0).x) {
-   Debug.Log("onnistuu");
+   // Debug.Log(shoulder.rotation.eulerAngles.x + " ");
+   if(shoulder.rotation.eulerAngles.x > 330) {
+  // Debug.Log("onnistuu");
    }
 
-   // Debug.Log("Shoulder: "+shoulder.rotation+"\nElbow"+elbow.rotation);
+    Debug.Log("Shoulder: "+shoulder.velocity+"\nElbow"+elbow.rotation);
     if(Input.GetKey(KeyCode.A)) {
     //Debug.Log("asd");
-    shoulder.velocity = Vector3.up * 5;
-   
+    elbow.velocity= Vector3.up * 5;
+    
     }
 
       if(Input.GetKey(KeyCode.S)) {
-    elbow.velocity = Vector3.up * 5;
+    wrist.velocity = Vector3.up * 5;
     }
 
       if(Input.GetKey(KeyCode.D)) {
-    // * 100);
+        for(int i = 0;i<6;i++) {
+    bs.SetBlendShapeWeight(i,0);
+    }
+    bs.SetBlendShapeWeight(1,100);
     }
 	
 
-    if(Input.GetKey(KeyCode.Space)) {
+    if(Input.GetKey(KeyCode.E)) {
+    for(int i = 0;i<6;i++) {
+    bs.SetBlendShapeWeight(i,0);
+    }
+    bs.SetBlendShapeWeight(0,100);
+    }
+
+        if(Input.GetKey(KeyCode.C)) {
+    for(int i = 0;i<6;i++) {
+    bs.SetBlendShapeWeight(i,0);
+    }
+    bs.SetBlendShapeWeight(2,100);
+    }
 
 
+        if(Input.GetKey(KeyCode.R)) {
+    for(int i = 0;i<6;i++) {
+    bs.SetBlendShapeWeight(i,0);
+    }
+    bs.SetBlendShapeWeight(3,100);
+    }
+
+        if(Input.GetKey(KeyCode.F)) {
+    for(int i = 0;i<6;i++) {
+    bs.SetBlendShapeWeight(i,0);
+    }
+    bs.SetBlendShapeWeight(4,100);
+    }
+
+        if(Input.GetKey(KeyCode.V)) {
+    for(int i = 0;i<6;i++) {
+    bs.SetBlendShapeWeight(i,0);
+    }
+    bs.SetBlendShapeWeight(5,100);
     }
 
 
