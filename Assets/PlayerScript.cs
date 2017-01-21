@@ -16,12 +16,20 @@ public class PlayerScript : MonoBehaviour {
     float yaw = 0f;
     float pitch = 0f;
 
+    UIScript UIref;
+
+    void Start()
+    {
+        UIref = FindObjectOfType<UIScript>();
+    }
+
 	void Update () {
 
         //Liikuttaa pelaajaa
-        gameObject.transform.Translate(Vector3.right * playerSpeed / 100, Space.World);
-
-        RotateCamera();
+        if (!UIref.gamePaused) {
+            gameObject.transform.Translate(Vector3.right * playerSpeed / 100, Space.World);
+            RotateCamera();
+        }
 	}
 
     void RotateCamera()

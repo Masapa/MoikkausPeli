@@ -8,7 +8,7 @@ public class hand : MonoBehaviour {
     Rigidbody elbow;
     Rigidbody wrist;
   public Sanat current;
-
+  public bool saako = false;
     SkinnedMeshRenderer bs;
 
 
@@ -40,8 +40,9 @@ public class hand : MonoBehaviour {
 	void FixedUpdate () {
    // Debug.Log(shoulder.rotation.eulerAngles.x + " ");
    if(shoulder.rotation.eulerAngles.x > 330) {
-  Debug.Log("onnistuu");
-   }
+  //Debug.Log("onnistuu");
+  saako = true;
+   }else { saako = false;}
 
   //  Debug.Log("Shoulder: "+shoulder.velocity+"\nElbow"+elbow.rotation);
     if(Input.GetKey(KeyCode.A)) {

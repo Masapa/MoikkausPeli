@@ -563,7 +563,7 @@ GameObject:
   - 114: {fileID: 114000011942433584}
   m_Layer: 0
   m_Name: Main Camera 2
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1386,6 +1386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 50
+  hp: 3
 --- !u!114 &114000012652467010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1398,6 +1399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current: 0
+  saako: 0
 --- !u!114 &114000012756823378
 MonoBehaviour:
   m_ObjectHideFlags: 1

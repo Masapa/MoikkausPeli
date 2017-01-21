@@ -23,7 +23,9 @@ public class randomSpawn : MonoBehaviour {
         ukot = Resources.LoadAll<GameObject>("Prefabs/Ukkelit");
     foreach(GameObject a in lista) {
     Debug.Log("UKKO TEHTY");
-        listaa.Add(Instantiate(ukot[Random.Range(0,ukot.Length)],a.transform,false) as GameObject);
+        int tmp = Random.Range(0,3);
+        if(tmp == 1) { listaa.Add(Instantiate(ukot[Random.Range(0,ukot.Length)],a.transform,false) as GameObject);}
+        
        
     } 
 
