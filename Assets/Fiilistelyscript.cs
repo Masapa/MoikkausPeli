@@ -32,7 +32,7 @@ public class Fiilistelyscript : MonoBehaviour {
         pitch -= verticalSpeed * Input.GetAxis("Mouse Y");
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
-        Debug.Log("Yaw: " + yaw + "  " + "Pitch: " + pitch);
+      //  Debug.Log("Yaw: " + yaw + "  " + "Pitch: " + pitch);
 
         transform.localEulerAngles = new Vector3(pitch, yaw + 90, 0);
     }

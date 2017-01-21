@@ -7,6 +7,7 @@ public class hand : MonoBehaviour {
     Rigidbody shoulder;
     Rigidbody elbow;
     Rigidbody wrist;
+  public Sanat current;
 
     SkinnedMeshRenderer bs;
 
@@ -39,10 +40,10 @@ public class hand : MonoBehaviour {
 	void FixedUpdate () {
    // Debug.Log(shoulder.rotation.eulerAngles.x + " ");
    if(shoulder.rotation.eulerAngles.x > 330) {
-  // Debug.Log("onnistuu");
+  Debug.Log("onnistuu");
    }
 
-    Debug.Log("Shoulder: "+shoulder.velocity+"\nElbow"+elbow.rotation);
+  //  Debug.Log("Shoulder: "+shoulder.velocity+"\nElbow"+elbow.rotation);
     if(Input.GetKey(KeyCode.A)) {
     //Debug.Log("asd");
     elbow.velocity= Vector3.up * 5;
@@ -58,6 +59,7 @@ public class hand : MonoBehaviour {
     bs.SetBlendShapeWeight(i,0);
     }
     bs.SetBlendShapeWeight(1,100);
+    current = Sanat.perus;
     }
 	
 
@@ -66,6 +68,7 @@ public class hand : MonoBehaviour {
     bs.SetBlendShapeWeight(i,0);
     }
     bs.SetBlendShapeWeight(0,100);
+    current = Sanat.peukku;
     }
 
         if(Input.GetKey(KeyCode.C)) {
@@ -73,6 +76,7 @@ public class hand : MonoBehaviour {
     bs.SetBlendShapeWeight(i,0);
     }
     bs.SetBlendShapeWeight(2,100);
+    current = Sanat.hevi;
     }
 
 
@@ -81,6 +85,7 @@ public class hand : MonoBehaviour {
     bs.SetBlendShapeWeight(i,0);
     }
     bs.SetBlendShapeWeight(3,100);
+    current = Sanat.suupdood;
     }
 
         if(Input.GetKey(KeyCode.F)) {
@@ -88,6 +93,7 @@ public class hand : MonoBehaviour {
     bs.SetBlendShapeWeight(i,0);
     }
     bs.SetBlendShapeWeight(4,100);
+    current = Sanat.longlive;
     }
 
         if(Input.GetKey(KeyCode.V)) {
@@ -95,6 +101,7 @@ public class hand : MonoBehaviour {
     bs.SetBlendShapeWeight(i,0);
     }
     bs.SetBlendShapeWeight(5,100);
+    current = Sanat.finger;
     }
 
 
