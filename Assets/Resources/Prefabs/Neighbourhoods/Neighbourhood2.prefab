@@ -612,7 +612,6 @@ GameObject:
   - 4: {fileID: 487406}
   - 33: {fileID: 3374320}
   - 23: {fileID: 2335162}
-  - 65: {fileID: 6556010}
   m_Layer: 0
   m_Name: road (1)
   m_TagString: Untagged
@@ -23510,18 +23509,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135774}
   m_Mesh: {fileID: 4300026, guid: 1d1eb5d68d1aeb7459b3faeac01256c5, type: 3}
---- !u!65 &6556010
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 60.65817, y: 91.59179, z: 0}
-  m_Center: {x: -0.0000038146973, y: 0, z: 0}
 --- !u!95 &9518490
 Animator:
   serializedVersion: 3
