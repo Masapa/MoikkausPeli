@@ -25,7 +25,7 @@ public class randomSpawn : MonoBehaviour {
     Debug.Log("UKKO TEHTY");
         listaa.Add(Instantiate(ukot[Random.Range(0,ukot.Length)],a.transform,false) as GameObject);
        
-    } Debug.Log(listaa[listaa.Count]);
+    } 
 
     for(int i = 0;i<4;i++) {
     int tmp = Random.Range(0,listaa.Count);

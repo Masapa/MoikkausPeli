@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fiilistelyscript : MonoBehaviour {
+public class PlayerScript : MonoBehaviour {
 
     public float playerSpeed = 20;
 
