@@ -23,6 +23,7 @@ GameObject:
   - 23: {fileID: 23000011436421794}
   - 64: {fileID: 64000011807699568}
   - 114: {fileID: 114000012559732610}
+  - 114: {fileID: 114000012969591138}
   m_Layer: 0
   m_Name: vastaantulija_hiuksetpystyssa01
   m_TagString: kulkija
@@ -165,6 +166,25 @@ MonoBehaviour:
   expecting: 0
   whatToExpect: 0
   done: 0
+  soundsGood:
+  - {fileID: 8300000, guid: 749c896d202b2ec479a9c4078acd47e7, type: 3}
+  soudsBad:
+  - {fileID: 8300000, guid: eae3d3e8518a22e42a44de730b2756da, type: 3}
+  - {fileID: 8300000, guid: 3f4196638728e6e408ff7e6281daf4be, type: 3}
+  - {fileID: 8300000, guid: 7db6b9c07c1f6b34da17419e514cd0f1, type: 3}
+  model: 0
+  ass: {fileID: 0}
+--- !u!114 &114000012969591138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010167297446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135f82d684bfd6840964d3d3c1c23b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000012056662572
 SpriteRenderer:
   m_ObjectHideFlags: 1

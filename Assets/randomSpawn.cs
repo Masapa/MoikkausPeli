@@ -29,7 +29,7 @@ public class randomSpawn : MonoBehaviour {
        
     } 
 
-    for(int i = 0;i<4;i++) {
+    for(int i = 0;i<listaa.Count/2;i++) {
     int tmp = Random.Range(0,listaa.Count);
     listaa[tmp].GetComponent<kulkija>().GiveExpect();
     

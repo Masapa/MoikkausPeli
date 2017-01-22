@@ -55,6 +55,7 @@ GameObject:
   - 23: {fileID: 23000013950311998}
   - 114: {fileID: 114000013958241356}
   - 64: {fileID: 64000010395563820}
+  - 114: {fileID: 114000012667566644}
   m_Layer: 0
   m_Name: vastaantulija01 (1)
   m_TagString: kulkija
@@ -151,6 +152,17 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: ed824905c69272149af282289d8de112, type: 3}
+--- !u!114 &114000012667566644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014002688028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 135f82d684bfd6840964d3d3c1c23b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013958241356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +177,16 @@ MonoBehaviour:
   expecting: 0
   whatToExpect: 0
   done: 0
+  soundsGood:
+  - {fileID: 8300000, guid: 1ae8d109f84630e44b7b62e2ed35311b, type: 3}
+  - {fileID: 8300000, guid: c303aae4ed0bed64ea6b04f2b15d5f26, type: 3}
+  soudsBad:
+  - {fileID: 8300000, guid: dbf619972b61712458023523d66af491, type: 3}
+  - {fileID: 8300000, guid: 2a377b5aa280c404488e28d007062229, type: 3}
+  - {fileID: 8300000, guid: e8c22cb39c2f50e44b9bf372524962fc, type: 3}
+  - {fileID: 8300000, guid: bd58d3ae84d0a5045914bec4ad1d2d6f, type: 3}
+  model: 0
+  ass: {fileID: 0}
 --- !u!212 &212000011009876854
 SpriteRenderer:
   m_ObjectHideFlags: 1

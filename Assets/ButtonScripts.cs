@@ -12,4 +12,8 @@ public class ButtonScripts : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void Credits() {
+    Application.LoadLevel(2);
+    }
 }

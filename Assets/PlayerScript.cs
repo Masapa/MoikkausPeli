@@ -8,8 +8,8 @@ public class PlayerScript : MonoBehaviour {
     float horizontalSpeed = 2f;
     float verticalSpeed = 2f;
 
-    float maxYaw = 30;
-    float minYaw = -30;
+    float maxYaw = 40;
+    float minYaw = -40;
     float maxPitch = 13;
     float minPitch = -13;
 

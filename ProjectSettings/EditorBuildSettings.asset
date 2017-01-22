@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/scenes/TheHoods.unity
+    path: Assets/scenes/Testaaminen.unity
+  - enabled: 1
+    path: Assets/scenes/credits.unity
