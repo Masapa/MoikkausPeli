@@ -1,24 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Rotater : MonoBehaviour {
+public class Rotater : MonoBehaviour
+{
 
     GameObject target;
 
     void Start()
     {
-        target = FindObjectOfType<PlayerScript>().gameObject;
+        try
+        {
+            target = FindObjectOfType<PlayerScript>().gameObject;
+        }
+        catch { }
     }
 
     void Update()
     {
-        var targetPosition = target.transform.position;
-        targetPosition.y = transform.position.x;
-        transform.LookAt(targetPosition);
-        transform.eulerAngles = new Vector3(
-        270,
-        transform.eulerAngles.y,
-        transform.eulerAngles.z
-        );
+        if (target != null)
+        {
+            var targetPosition = target.transform.position;
+            targetPosition.y = transform.position.x;
+            transform.LookAt(targetPosition);
+            transform.eulerAngles = new Vector3(
+            270,
+            transform.eulerAngles.y,
+            transform.eulerAngles.z
+            );
+        }
     }
 }

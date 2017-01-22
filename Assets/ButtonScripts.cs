@@ -16,4 +16,7 @@ public class ButtonScripts : MonoBehaviour {
     public void Credits() {
     Application.LoadLevel(2);
     }
+    public void Menu() {
+    Application.LoadLevel(0);
+    }
 }

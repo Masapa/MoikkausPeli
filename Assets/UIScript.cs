@@ -49,6 +49,7 @@ public class UIScript : MonoBehaviour {
        // Time.timeScale = 0.0001f;
         gamePaused = true;
         over.SetActive(true);
+        if(Input.GetKey(KeyCode.Escape)) {Application.LoadLevel(0); }
 
        
 
