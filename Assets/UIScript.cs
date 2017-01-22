@@ -33,7 +33,9 @@ public class UIScript : MonoBehaviour {
 
     void Update()
     {
+    if(player.hp>=0) {
         UIImage.sprite = StateImages[player.hp]; //tohon sisälle tukee:  player.hp
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (!gamePaused) {
